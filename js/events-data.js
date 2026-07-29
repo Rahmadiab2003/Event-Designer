@@ -1,0 +1,1 @@
+// Static event data placeholder
