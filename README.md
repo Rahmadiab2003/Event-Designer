@@ -1,1 +1,1 @@
-# Event-Designer
+# Event Designer
