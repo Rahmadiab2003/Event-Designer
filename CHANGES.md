@@ -37,3 +37,18 @@
 - **Technical Log:**
   - `css/styles.css`: Added styles for `.events-grid` (CSS Grid layout), `.event-card` (elevated hovers, scaled image zooms, sub-elements), `.event-dialog` (modal positioning, custom backdrop overlays with blur filters, entry scale/fade transitions via `@starting-style`), and `.confirmation-popup` (top-center glassmorphic toast notification).
 - **Plain English Summary:** Styled the events page list layout, dynamic image hover states, overlay detail modals, and success toast popups with smooth transitions and responsive controls.
+
+## Request #7 - 2026-07-30
+- **Technical Summary:** Task 3.1 Events Data Array & Dynamic Grid Rendering
+- **Technical Log:**
+  - `js/events-data.js`: Defined static `eventsData` array matching the SRS schema (`id`, `title`, `image`, `shortDescription`, `fullDescription`).
+  - `js/events.js`: Added `renderEvents()` logic to dynamically inject `.event-card` HTML elements into the `#events-grid` container upon DOMContentLoaded.
+- **Plain English Summary:** Created the static event data collection and implemented JavaScript logic to dynamically render the event cards into the events page grid.
+
+## Request #8 - 2026-07-30
+- **Technical Summary:** Task 3.2 Manual Details Dialog Close Handlers
+- **Technical Log:**
+  - `js/events.js`: Added click event listeners on `#dialog-close` button and bounding rect checks on backdrop clicks for `#event-dialog` to trigger `.close()`.
+- **Plain English Summary:** Added interactive event handlers allowing users to manually dismiss the event detail modal using either the top-right close button or by clicking outside on the backdrop.
+
+
