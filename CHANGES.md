@@ -8,6 +8,12 @@
   - `index.html`: Added hero `<section>` with headline `<h1>`, introductory `<p>`, and CTA link pointing to `events.html`.
 - **Plain English Summary:** Established the base file structure for all pages and built the HTML content skeleton for the landing page hero section.
 
+## Request #3 - 2026-07-30
+- **Technical Summary:** Task 1.3 Events Page Markup
+- **Technical Log:**
+  - `events.html`: Added section heading, `#events-grid` container for JS dynamic rendering, `<dialog id="event-dialog">` with close/choose buttons, and `#confirmation-popup` container (hidden by default).
+- **Plain English Summary:** Added the HTML markup structure for the events grid container, the event details popup dialog, and the success confirmation box on the events page.
+
 ## Request #2 - 2026-07-30
 - **Technical Summary:** Task 1.2 About Page Markup
 - **Technical Log:**
