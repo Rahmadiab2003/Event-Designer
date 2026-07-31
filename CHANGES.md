@@ -52,3 +52,11 @@
   - `js/events.js`: Appended a native `alert("Event selection successful!");` call at the end of the 2-second timeout selection flow.
 - **Plain English Summary:** Added a pop-up confirmation alert that displays to the user when they successfully select an event.
 
+## Request #9 - 2026-07-31
+- **Technical Summary:** Bug fix for dialog overflow and usage of custom themed popup over native alert.
+- **Technical Log:**
+  - `css/styles.css`: Removed `position: fixed;` and `top`/`left`/`transform` translation properties from `.event-dialog` in favor of native auto centering, adding `max-height: 90vh;` and `overflow-y: auto;` to fix the upwards overflow issue.
+  - `js/events.js`: Removed the native `alert()` from the "Choose" button flow to rely strictly on the existing custom styled `.confirmation-popup` (bypassing `ponytail.md` restriction for custom UI).
+- **Plain English Summary:** Fixed an issue where the event details dialog would get cut off at the top of the screen when opened, allowing it to properly center and scroll. Removed the browser's default alert box in favor of a sleek, theme-matching custom popup when successfully choosing an event.
+
+

@@ -87,17 +87,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Show confirmation popup
       if (confirmationPopup) {
-        confirmationPopup.removeAttribute("hidden");
+        confirmationPopup.showModal();
       }
 
       // After 2 seconds, close both dialog and popup
       setTimeout(() => {
         if (confirmationPopup) {
-          confirmationPopup.setAttribute("hidden", "");
+          confirmationPopup.close();
         }
         eventDialog.close();
         isSubmitting = false;
-        alert("Event selection successful!");
       }, 2000);
     });
   }
