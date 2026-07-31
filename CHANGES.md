@@ -39,16 +39,24 @@
 - **Plain English Summary:** Styled the events page list layout, dynamic image hover states, overlay detail modals, and success toast popups with smooth transitions and responsive controls.
 
 ## Request #7 - 2026-07-30
-- **Technical Summary:** Task 3.1 Events Data Array & Dynamic Grid Rendering
+- **Technical Summary:** Task 3.1 & 3.3 Dynamic rendering, events selection flow, details dialog, and 2-second confirmation auto-close.
 - **Technical Log:**
-  - `js/events-data.js`: Defined static `eventsData` array matching the SRS schema (`id`, `title`, `image`, `shortDescription`, `fullDescription`).
-  - `js/events.js`: Added `renderEvents()` logic to dynamically inject `.event-card` HTML elements into the `#events-grid` container upon DOMContentLoaded.
-- **Plain English Summary:** Created the static event data collection and implemented JavaScript logic to dynamically render the event cards into the events page grid.
+  - `js/events-data.js`: Defined an array of mock event objects (`EVENTS_DATA`) with titles, images, and descriptions.
+  - `js/events.js`: Implemented dynamic card rendering into the events grid, opening and populating details dialog, selection flow with disabled states and 2-second auto-close timeout.
+  - `assets/wedding.jpg`, `assets/corporate.jpg`, `assets/birthday.jpg`: Generated and added mock images for the three event types.
+- **Plain English Summary:** Populated the page with three elegant event types (Weddings, Corporate Galas, and Birthdays), set up the card details modal to open when clicked, and made the "Choose" button show a confirmation banner that closes the whole view after two seconds.
 
-## Request #8 - 2026-07-30
-- **Technical Summary:** Task 3.2 Manual Details Dialog Close Handlers
+## Request #8 - 2026-07-31
+- **Technical Summary:** Task 3.2 Close Handlers & success alert addition.
 - **Technical Log:**
-  - `js/events.js`: Added click event listeners on `#dialog-close` button and bounding rect checks on backdrop clicks for `#event-dialog` to trigger `.close()`.
-- **Plain English Summary:** Added interactive event handlers allowing users to manually dismiss the event detail modal using either the top-right close button or by clicking outside on the backdrop.
+  - `js/events.js`: Added manual close button click handlers and robust bounding client rect backdrop click-outside handlers to close the dialog. Appended a native `alert("Event selection successful!");` call at the end of the 2-second timeout selection flow.
+- **Plain English Summary:** Added interactive controls to manually dismiss the dialog, and added a default browser success popup.
+
+## Request #9 - 2026-07-31
+- **Technical Summary:** Bug fix for dialog overflow and usage of custom themed popup over native alert.
+- **Technical Log:**
+  - `css/styles.css`: Removed `position: fixed;` and `top`/`left`/`transform` translation properties from `.event-dialog` in favor of native auto centering, adding `max-height: 90vh;` and `overflow-y: auto;` to fix the upwards overflow issue.
+  - `js/events.js`: Removed the native `alert()` from the "Choose" button flow to rely strictly on the existing custom styled `.confirmation-popup` (bypassing `ponytail.md` restriction for custom UI).
+- **Plain English Summary:** Fixed an issue where the event details dialog would get cut off at the top of the screen when opened, allowing it to properly center and scroll. Removed the browser's default alert box in favor of a sleek, theme-matching custom popup when successfully choosing an event.
 
 
