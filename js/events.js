@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         eventDialog.close();
         isSubmitting = false;
+        alert("Event selection successful!");
       }, 2000);
     });
   }

@@ -45,3 +45,10 @@
   - `js/events.js`: Implemented dynamic card rendering into the events grid, opening and populating detail dialog, manual click/backdrop closing, and selection flow with disabled states and 2-second auto-close timeout.
   - `assets/wedding.jpg`, `assets/corporate.jpg`, `assets/birthday.jpg`: Generated and added mock images for the three event types.
 - **Plain English Summary:** Populated the page with three elegant event types (Weddings, Corporate Galas, and Birthdays), set up the card details modal to open when clicked, and made the "Choose" button show a confirmation banner that closes the whole view after two seconds.
+
+## Request #8 - 2026-07-31
+- **Technical Summary:** Added a native browser success alert when an event is selected.
+- **Technical Log:**
+  - `js/events.js`: Appended a native `alert("Event selection successful!");` call at the end of the 2-second timeout selection flow.
+- **Plain English Summary:** Added a pop-up confirmation alert that displays to the user when they successfully select an event.
+
